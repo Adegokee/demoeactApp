@@ -8,8 +8,8 @@ const Item = ({x}) => {
     <div>
     <p style={{color:'white', textAlign:'center'}}>{x.title}</p>
     <main style={{display:'flex', justifyContent:'space-between', padding:'10px', alignItems:'center' }}>
-    <span style={{color:'white'}}>{x.release_date}</span>
-    <span style={{color:'white', backgroundColor:'green', padding:'10px', borderRadius:'50%'}}>{x.vote_average.toFixed(0)}</span>
+    <span >{x.release_date}</span>
+    <span style={{ backgroundColor:'green', padding:'10px', borderRadius:'50%'}}>{x.vote_average.toFixed(0)}</span>
     </main>
     </div>
     </div>

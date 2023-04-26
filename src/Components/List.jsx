@@ -12,14 +12,16 @@ const List = () => {
             const response=await fetch(`${url}${type}${key}${searchKey}`)
             const data =await response.json()
             setMovie(data.results)
+            setMovieSelected(data.results[0])
             console.log(data.results)
+
         }
         adaApi()
     }, [movie, setMovie])
     return (
-    <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap', backgroundColor:'black'}}>
+    <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>
     {movie.map((x)=> (
-        <Item x={x}/>
+        <Item key={x.id} x={x}/>
     ))}
     </div>
     )
