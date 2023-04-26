@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import  OurContext  from './MovieContext';
+import List from './Components/List';
 
+// const key ='/movie?api_key=a48959be49dea9d323a3f6403522b738&query='
+const imgpath = 'https://image.tmdb.org/t/p/w500'
+// const url = 'https://api.themoviedb.org/3/discover/movie?api_key=a48959be49dea9d323a3f6403522b738&query=terminator'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <OurContext>
+    <List/>
+    </OurContext>
   );
 }
 
